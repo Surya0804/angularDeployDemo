@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      background-color: #fafafa;
+    }
+
+    .login-container {
+      margin-top: 5%;
+    }
+
+    .login-box {
+      background-color: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      max-width: 350px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .login-box h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .form-control {
+      border: 1px solid #efefef;
+      border-radius: 3px;
+      box-shadow: none;
+    }
+
+    .btn-primary {
+      background-color: #3897f0;
+      border-color: #3897f0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center login-container">
+      <div class="col-md-4">
+        <div class="login-box">
+          <h1 class="text-center">Instagram</h1>
+          <form>
+            <div class="form-group">
+              <input type="text" name="username" id="username" [(ngModel)]="employee.username" class="form-control" placeholder="Username or Email">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="password" [(ngModel)]="employee.password" class="form-control" placeholder="Password">
+            </div>
+            <button type="submit" (click)="onClick()" class="btn btn-primary btn-block">Log In</button>
+          </form>
+          <p class="text-center mt-3">Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
